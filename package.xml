@@ -1,0 +1,30 @@
+<package>
+  <name>gazebo_ros_3dx</name>
+  <version>1.0.0</version>
+  <description>Simple URDF/Gazebo stuff for Pioneer 3DX</description>
+
+  <license>BSD</license>
+
+  <url type="website">https://github.com/jimfinnis/gazebo_ros_3dx</url>
+  <!-- <url type="bugtracker"></url> -->
+
+  <maintainer email="white@pale.org">Hunter Allen</maintainer>
+
+  <author email="white@pale.org">Hunter Allen</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>urdf</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>tf</build_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>tf</run_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>urdf</run_depend>
+
+  <run_depend>std_msgs</run_depend>
+
+</package>

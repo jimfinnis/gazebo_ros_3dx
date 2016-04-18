@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Load joint controller configurations from YAML file to parameter server -->
+  <rosparam file="$(find gazebo_ros_3dx)/config/p3dx_control.yaml" command="load"/>
+
+  <!-- load the controllers -->
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+    output="screen" ns="/p3dx" args="left_velocity_controller right_velocity_controller joint_state_controller"/>
+
+  <!-- convert joint states to TF transforms for rviz, etc -->
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+    respawn="false" output="screen">
+    <remap from="/joint_states" to="/p3dx/joint_states" />
+  </node>
+  
+  <!-- send table.xml to param server -->
+  <param name="robot_description" 
+    command="$(find xacro)/xacro.py $(find gazebo_ros_3dx)/defs/jcf.xacro"
+  />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model"
+    args="-z 0.1 -urdf -param robot_description -model robot_description"
+    respawn="false" output="screen" />
+
+</launch>
