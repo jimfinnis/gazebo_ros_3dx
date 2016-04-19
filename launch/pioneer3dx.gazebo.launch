@@ -18,8 +18,9 @@
   <param name="robot_description" 
     command="$(find xacro)/xacro.py $(find gazebo_ros_3dx)/defs/jcf.xacro"
   />
-
-  <include file="$(find gazebo_ros)/launch/empty_world.launch"/>
+  
+  <!-- start gazebo with a suitable world -->
+  <include file="$(find gazebo_ros_3dx)/launch/world.launch"/>
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
   <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model"

@@ -157,8 +157,8 @@
     <inertial>
       <mass value="0.1"/>	
       <origin xyz="0 0 0"/>
-      <inertia ixx="0.012411765597" ixy="-0.000711733678" ixz="0.00050272983"
-        iyy="0.015218160428" iyz="-0.000004273467" izz="0.011763977943"/>
+      <inertia ixx="0.12411765597" ixy="-0.00711733678" ixz="0.0050272983"
+        iyy="0.15218160428" iyz="-0.00004273467" izz="0.11763977943"/>
     </inertial>
     <visual name="pioneer_geom">
       <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -262,19 +262,19 @@
   <xacro:macro name="wheel" params="side reflect">
     <link name="${side}_wheel">
       <inertial>
-        <mass value="0.01"/>	
-        <origin xyz="0 0 0"/>
+        <mass value="10"/>	
+        <origin xyz="0 0 0" rpy="0 1 0"/>
         <inertia 
-          ixx="0.000165935" 
+          ixx="0.165935" 
           ixy="0" 
           ixz="0"
-          iyy="0.000317959" 
+          iyy="0.317959" 
           iyz="0"
-          izz="0.000165935" 
+          izz="0.165935" 
         />
       </inertial>
       <visual>
-        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <origin xyz="0 0 0" rpy="0 1 0"/>
         <geometry>
           <mesh filename="package://gazebo_ros_3dx/meshes/p3dx_meshes/${side}_wheel.stl"/>
         </geometry>
@@ -292,6 +292,8 @@
     
     <gazebo reference="${side}_wheel">
       <material value="Gazebo/Black"/>
+      <mu1>10</mu1> <!-- rubber friction coeff. -->
+      <mu2>10</mu2>
     </gazebo>
     
     <joint name="${side}_wheel_joint" type="continuous">
