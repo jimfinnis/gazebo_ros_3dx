@@ -303,16 +303,18 @@
     </plugin>
   </gazebo>
   
-<!-- test sonar
-  <xacro:sonar_sensor name="s1" parent="base_link" 
-    ros_topic="s1" update_rate="10" min_range="0.1" max_range="10"
-    field_of_view="0.267" ray_count="1">
-    <origin xyz="0.2 0 0.22" rpy="0 0 0"/>
-  </xacro:sonar_sensor>
--->  
-
+  <!-- test sonar
+      <xacro:sonar_sensor name="s1" parent="base_link" 
+        ros_topic="s1" update_rate="10" min_range="0.1" max_range="10"
+        field_of_view="0.267" ray_count="1">
+        <origin xyz="0.2 0 0.22" rpy="0 0 0"/>
+      </xacro:sonar_sensor>
+      -->  
+  
+  <xacro:include filename="$(find gazebo_ros_3dx)/defs/camera.urdf.xacro"/>
+  
   <xacro:include filename="$(find gazebo_ros_3dx)/defs/sonar_pos.urdf.xacro"/>
-
+  
   
   
   <!-- controller 

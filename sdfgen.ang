@@ -1,3 +1,8 @@
+#
+# Usage: make a list of elements with [..mkbox,..mkbox,...] then call
+# "world" with that list. Print the result.
+#
+
 require "xmlgen.ang" import
 
 :world |elements:|
