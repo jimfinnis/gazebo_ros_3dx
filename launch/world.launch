@@ -10,7 +10,7 @@
   <arg name="debug" default="false"/>
   <arg name="physics" default="ode"/>
   <arg name="verbose" default="false"/>
-  <arg name="world_name" default="$(find gazebo_ros_3dx)/worlds/foo.sdf"/>
+  <arg name="world_name" default="$(find gazebo_ros_3dx)/worlds/empty.sdf"/>
 
   <!-- set use_sim_time flag -->
   <group if="$(arg use_sim_time)">

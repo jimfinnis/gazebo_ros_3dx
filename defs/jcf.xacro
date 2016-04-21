@@ -6,6 +6,8 @@
   xmlns:xacro="http://ros.org/wiki/xacro"
   name="pioneer3dx">
   
+  <xacro:include filename="$(find gazebo_ros_3dx)/defs/sonar_sensor.urdf.xacro"/>
+  
   <link name="base_link">
     <!-- The base visual is fine. Just the inertial is questionable.-->
     <visual name="pioneer_geom">
@@ -47,7 +49,7 @@
     <parent link="base_link"/>
     <child link="dummyinertial"/>
   </joint>
-    
+  
   
   <link name="top_plate">
     <inertial>
@@ -115,34 +117,7 @@
   </gazebo>
   
   <!-- Center Wheel + Hubcap -->
-  <!--
-  <link name="center_hubcap">
-    <inertial>
-      <mass value="0.01"/>	
-      <origin xyz="0 0 0"/>
-      <inertia ixx="0.012411765597" ixy="-0.000711733678" ixz="0.00050272983"
-        iyy="0.015218160428" iyz="-0.000004273467" izz="0.011763977943"/>
-    </inertial>
-    <visual name="pioneer_geom">
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry name="pioneer_geom">
-        <mesh filename="package://gazebo_ros_3dx/meshes/p3dx_meshes/center_hubcap.stl"/>
-      </geometry>
-      <material name="swivel">
-        <color rgba="0.5 0.5 0.5 1"/>
-      </material>
-    </visual>
-    <collision>
-      <origin xyz="0 0 0" rpy="0 0 0"/>
-      <geometry>
-        <box size="0.05 0.05 0.05"/>
-      </geometry>
-    </collision>
-  </link>
-  <gazebo reference="center_hubcap">
-    <material value="Gazebo/Green"/>
-  </gazebo>
-  -->
+  
   <joint name="swivel_hubcap_joint" type="continuous">
     <origin xyz="-0.026 0 -0.016" rpy="0 0 0"/>
     <axis xyz="0 1 0"/>
@@ -180,13 +155,13 @@
   <gazebo reference="center_wheel">
     <material value="Gazebo/Blue"/>
   </gazebo>
-<!--  
-  <joint name="center_wheel_joint" type="fixed">
-    <origin xyz="-0.0035 0 -0.001" rpy="0 0 0"/>
-    <parent link="center_wheel"/>
-    <child link="center_hubcap"/>
-  </joint>
--->  
+  <!--  
+      <joint name="center_wheel_joint" type="fixed">
+        <origin xyz="-0.0035 0 -0.001" rpy="0 0 0"/>
+        <parent link="center_wheel"/>
+        <child link="center_hubcap"/>
+      </joint>
+      -->  
   <!-- Front + Back Sonar -->
   <link name="front_sonar">
     <inertial>
@@ -241,7 +216,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
-        <box size=" 0.5 0.25 0.05"/>
+        <box size=" 0 0 0"/>
       </geometry>
     </collision>
   </link>
@@ -328,23 +303,34 @@
     </plugin>
   </gazebo>
   
+<!-- test sonar
+  <xacro:sonar_sensor name="s1" parent="base_link" 
+    ros_topic="s1" update_rate="10" min_range="0.1" max_range="10"
+    field_of_view="0.267" ray_count="1">
+    <origin xyz="0.2 0 0.22" rpy="0 0 0"/>
+  </xacro:sonar_sensor>
+-->  
+
+  <xacro:include filename="$(find gazebo_ros_3dx)/defs/sonar_pos.urdf.xacro"/>
+
+  
   
   <!-- controller 
-  
-  <gazebo>
-    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
-      <updateRate>100.0</updateRate>
-      <robotNamespace>/</robotNamespace>
-      <leftJoint>left_wheel_joint</leftJoint>
-      <rightJoint>right_wheel_joint</rightJoint>
-      <wheelSeparation>0.3</wheelSeparation>
-      <wheelDiameter>0.1</wheelDiameter>
-      <robotBaseFrame>base_link</robotBaseFrame>
-      <torque>200</torque>
-      <commandTopic>cmd_vel</commandTopic>
-      <odometryTopic>odom</odometryTopic>
-      <odometryFrame>odom</odometryFrame>
-    </plugin>
-  </gazebo>
-  -->
+      
+      <gazebo>
+        <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+          <updateRate>100.0</updateRate>
+          <robotNamespace>/</robotNamespace>
+          <leftJoint>left_wheel_joint</leftJoint>
+          <rightJoint>right_wheel_joint</rightJoint>
+          <wheelSeparation>0.3</wheelSeparation>
+          <wheelDiameter>0.1</wheelDiameter>
+          <robotBaseFrame>base_link</robotBaseFrame>
+          <torque>200</torque>
+          <commandTopic>cmd_vel</commandTopic>
+          <odometryTopic>odom</odometryTopic>
+          <odometryFrame>odom</odometryFrame>
+        </plugin>
+      </gazebo>
+      -->
 </robot>
