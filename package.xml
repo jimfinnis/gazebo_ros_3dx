@@ -3,14 +3,13 @@
   <version>1.0.0</version>
   <description>Simple URDF/Gazebo stuff for Pioneer 3DX</description>
 
-  <license>BSD</license>
+  <license>MIT</license>
 
   <url type="website">https://github.com/jimfinnis/gazebo_ros_3dx</url>
-  <!-- <url type="bugtracker"></url> -->
 
-  <maintainer email="white@pale.org">Hunter Allen</maintainer>
+  <maintainer email="jim.finnis@gmail.com">Jim Finnis</maintainer>
 
-  <author email="white@pale.org">Hunter Allen</author>
+  <author email="jim.finnis@gmail.com">Jim Finnis</author>
 
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>sensor_msgs</build_depend>

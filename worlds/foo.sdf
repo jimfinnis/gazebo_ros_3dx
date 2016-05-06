@@ -79,7 +79,7 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-<model name="unit_box_1">
+<model name="box_1">
 <pose>
 -4 0 0 0 0 0 </pose>
  <link name="unit_box_link_1">
@@ -121,7 +121,7 @@
  <static>1</static>
  </model>
 
-<model name="unit_box_2">
+<model name="box_2">
 <pose>
 4 0 0 0 0 0 </pose>
  <link name="unit_box_link_2">
@@ -163,7 +163,7 @@
  <static>1</static>
  </model>
 
-<model name="unit_box_3">
+<model name="box_3">
 <pose>
 0 4 0 0 0 0 </pose>
  <link name="unit_box_link_3">
@@ -205,7 +205,7 @@
  <static>1</static>
  </model>
 
-<model name="unit_box_4">
+<model name="box_4">
 <pose>
 0 -4 0 0 0 0 </pose>
  <link name="unit_box_link_4">
@@ -234,6 +234,90 @@
 <box>
 <size>
 8 1 0.100000 </size>
+ </box>
+ </geometry>
+ <material>
+<script>
+<uri>file://media/materials/scripts/gazebo.material</uri>
+ <name>Gazebo/Grey</name>
+ </script>
+ </material>
+ </visual>
+ </link>
+ <static>1</static>
+ </model>
+
+<model name="lightrgbf00_a">
+<pose>
+-3 -3 0 0 0 0 </pose>
+ <link name="unit_box_link_5">
+<inertial>
+<mass>1</mass>
+ <inertia>
+<izz>1</izz>
+ <ixx>1</ixx>
+ <iyz>0</iyz>
+ <ixz>0</ixz>
+ <ixy>0</ixy>
+ <iyy>1</iyy>
+ </inertia>
+ </inertial>
+ <collision name="collision">
+<geometry>
+<box>
+<size>
+0.100000 0.100000 0.100000 </size>
+ </box>
+ </geometry>
+ <max_contacts>10</max_contacts>
+ </collision>
+ <visual name="visual">
+<geometry>
+<box>
+<size>
+0.100000 0.100000 0.100000 </size>
+ </box>
+ </geometry>
+ <material>
+<script>
+<uri>file://media/materials/scripts/gazebo.material</uri>
+ <name>Gazebo/Grey</name>
+ </script>
+ </material>
+ </visual>
+ </link>
+ <static>1</static>
+ </model>
+
+<model name="lightrgb0f0_b">
+<pose>
+0 3 0 0 0 0 </pose>
+ <link name="unit_box_link_6">
+<inertial>
+<mass>1</mass>
+ <inertia>
+<izz>1</izz>
+ <ixx>1</ixx>
+ <iyz>0</iyz>
+ <ixz>0</ixz>
+ <ixy>0</ixy>
+ <iyy>1</iyy>
+ </inertia>
+ </inertial>
+ <collision name="collision">
+<geometry>
+<box>
+<size>
+6 0.100000 0.100000 </size>
+ </box>
+ </geometry>
+ <max_contacts>10</max_contacts>
+ </collision>
+ <visual name="visual">
+<geometry>
+<box>
+<size>
+6 0.100000 0.100000 </size>
  </box>
  </geometry>
  <material>

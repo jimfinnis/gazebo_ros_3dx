@@ -13,9 +13,13 @@ publeft = rospy.Publisher('p3dx/left_velocity_controller/command',Float64,queue_
 pubright = rospy.Publisher('p3dx/right_velocity_controller/command',Float64,queue_size=100)
 
 rate = rospy.Rate(3) # 3Hz
+
+left = float(sys.argv[1])
+right = float(sys.argv[2])
+
 while not rospy.is_shutdown():
-    publeft.publish(1)
-    pubright.publish(1)
+    publeft.publish(left)
+    pubright.publish(right)
     rate.sleep()
 
 

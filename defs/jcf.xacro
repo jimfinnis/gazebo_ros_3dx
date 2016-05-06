@@ -27,8 +27,17 @@
       </geometry>
     </collision>
   </link>
+  
   <gazebo reference="base_link">
     <material value="Gazebo/Red"/>
+  </gazebo>
+  
+  <gazebo>
+    <plugin name="lightsensor" filename="liblightsensor_gazebo.so">
+      <link name="base_link"/>
+      <interval>0.1</interval>
+      <pixels>100</pixels>
+    </plugin>
   </gazebo>
   
   <link name="dummyinertial">
@@ -43,6 +52,7 @@
         izz="0.3338"/>
     </inertial>
   </link>
+  
   
   <joint name="dummy_base_joint" type="fixed">
     <origin xyz="0 0 0" rpy="0 0 0"/>

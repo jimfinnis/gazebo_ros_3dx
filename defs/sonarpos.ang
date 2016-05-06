@@ -1,7 +1,9 @@
 # generates sonar positions from a table, obtained by inspecting
-# the model in Blender. Outputs URDF.
+# the model in Blender. Outputs URDF. Also outputs C++ code to
+# /tmp/foo
 
 `regex library drop
+`io library drop
 require "util.ang" drop
 require "xmlgen.ang" drop
 
@@ -63,12 +65,21 @@ require "xmlgen.ang" drop
      "xmlns:xacro" "http://ros.org/wiki/xacro"
      ]
     
+    "/tmp/foo" "w" io$open !PlainOut
+    
     [
     ?L each {
         "s" ?Ct + !Name
-        ?Ct 1+ !Ct
         [i?`x, i?`y, i?`z] "%f %f %f" format !Origin
         [i?`a PI * 180.0 /] "0 0 %f" format !Rot
+        
+        # also output as C++
+        [?Ct,i?`x, i?`y,i?`a PI * 180.0 /]
+        "sonars[%d].set(%f,%f,%f);\n" format ?PlainOut io$write
+        ?Ct 1+ !Ct
+        
+        
+        # build XML tags
         "xacro:sonar_sensor"
         [%
          `name ?Name,
@@ -92,7 +103,7 @@ require "xmlgen.ang" drop
     }
     xmlgen$mktag?`output@.
          
-         
+    0!PlainOut
         
 )@ quit
     
