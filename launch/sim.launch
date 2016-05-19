@@ -6,7 +6,8 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/p3dx" args="left_velocity_controller right_velocity_controller joint_state_controller"/>
+    output="screen" ns="/p3dx" args="left_velocity_controller right_velocity_controller joint_state_controller">
+  </node>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"

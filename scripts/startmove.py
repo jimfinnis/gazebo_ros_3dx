@@ -9,8 +9,6 @@ from std_msgs.msg import Float64
 
 rospy.init_node("startmove",anonymous=True)
 
-#publeft = rospy.Publisher('p3dx/left_velocity_controller/command',Float64,queue_size=100)
-#pubright = rospy.Publisher('p3dx/right_velocity_controller/command',Float64,queue_size=100)
 publeft = rospy.Publisher('leftmotor',Float64,queue_size=100)
 pubright = rospy.Publisher('rightmotor',Float64,queue_size=100)
 
