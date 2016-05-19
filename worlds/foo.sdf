@@ -98,7 +98,7 @@
 <geometry>
 <box>
 <size>
-1 8 0.100000 </size>
+1 8 1 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -107,7 +107,7 @@
 <geometry>
 <box>
 <size>
-1 8 0.100000 </size>
+1 8 1 </size>
  </box>
  </geometry>
  <material>
@@ -140,7 +140,7 @@
 <geometry>
 <box>
 <size>
-1 8 0.100000 </size>
+1 8 1 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -149,7 +149,7 @@
 <geometry>
 <box>
 <size>
-1 8 0.100000 </size>
+1 8 1 </size>
  </box>
  </geometry>
  <material>
@@ -182,7 +182,7 @@
 <geometry>
 <box>
 <size>
-8 1 0.100000 </size>
+8 1 1 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -191,7 +191,7 @@
 <geometry>
 <box>
 <size>
-8 1 0.100000 </size>
+8 1 1 </size>
  </box>
  </geometry>
  <material>
@@ -224,7 +224,7 @@
 <geometry>
 <box>
 <size>
-8 1 0.100000 </size>
+8 1 1 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -233,7 +233,7 @@
 <geometry>
 <box>
 <size>
-8 1 0.100000 </size>
+8 1 1 </size>
  </box>
  </geometry>
  <material>
