@@ -247,9 +247,9 @@
  <static>1</static>
  </model>
 
-<model name="lightrgbf00_a">
+<model name="box_5">
 <pose>
--3 -3 0 0 0 0 </pose>
+-3 0 0 0 0 0 </pose>
  <link name="unit_box_link_5">
 <inertial>
 <mass>1</mass>
@@ -266,7 +266,7 @@
 <geometry>
 <box>
 <size>
-0.100000 0.100000 0.100000 </size>
+1 1 1 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -275,7 +275,7 @@
 <geometry>
 <box>
 <size>
-0.100000 0.100000 0.100000 </size>
+1 1 1 </size>
  </box>
  </geometry>
  <material>
@@ -289,9 +289,9 @@
  <static>1</static>
  </model>
 
-<model name="lightrgb0f0_b">
+<model name="lightrgbfff_a">
 <pose>
-0 3 0 0 0 0 </pose>
+-3 -3 0 0 0 0 </pose>
  <link name="unit_box_link_6">
 <inertial>
 <mass>1</mass>
@@ -308,7 +308,7 @@
 <geometry>
 <box>
 <size>
-6 0.100000 0.100000 </size>
+0.100000 0.100000 0.100000 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -317,7 +317,7 @@
 <geometry>
 <box>
 <size>
-6 0.100000 0.100000 </size>
+0.100000 0.100000 0.100000 </size>
  </box>
  </geometry>
  <material>
