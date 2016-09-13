@@ -291,7 +291,7 @@
 
 <model name="lightrgbfff_a">
 <pose>
--3 -3 0 0 0 0 </pose>
+-0.500000 -0.500000 0 0 0 0 </pose>
  <link name="unit_box_link_6">
 <inertial>
 <mass>1</mass>

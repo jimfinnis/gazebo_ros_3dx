@@ -7,6 +7,6 @@ require "sdfgen.ang" import
  0 -4 0   8 1 1 mkbox,
  -3 0 0   1 1 1 mkbox,
  
- -3 -3 0  0.1 0.1 0.1 "lightrgbf00_a" mknamedbox
+ -0.5 -0.5 0  0.1 0.1 0.1 "lightrgbfff_a" mknamedbox
 ] world.
 quit
