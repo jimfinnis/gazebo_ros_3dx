@@ -38,6 +38,8 @@
 #include <tf/transform_broadcaster.h>
 #include <kdl_parser/kdl_parser.hpp>
 
+//#include "diamondapparatus/diamondapparatus.h"
+
 int main(int argc, char** argv)
 {
 	ros::init(argc, argv, "state_publisher");

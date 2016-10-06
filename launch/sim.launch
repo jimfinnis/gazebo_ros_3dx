@@ -27,5 +27,10 @@
   <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model"
     args="-z 0.1 -urdf -param robot_description -model robot_description"
     respawn="false" output="screen" />
+  
+  <!-- start the "tracker" publishing to Diamond Apparatus -->
+  <node name="diamondpublish" pkg="gazebo_ros_3dx" type="diamondpublish.py"
+    respawn="false" output="screen" />
+  
 
 </launch>

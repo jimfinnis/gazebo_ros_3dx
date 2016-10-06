@@ -325,8 +325,6 @@
   
   <xacro:include filename="$(find gazebo_ros_3dx)/defs/sonar_pos.urdf.xacro"/>
   
-  
-  
   <!-- controller 
       
       <gazebo>
