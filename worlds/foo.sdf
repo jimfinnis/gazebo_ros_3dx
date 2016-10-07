@@ -82,7 +82,7 @@
 <model name="box_1">
 <pose>
 -4 0 0 0 0 0 </pose>
- <link name="unit_box_link_1">
+ <link name="link_1">
 <inertial>
 <mass>1</mass>
  <inertia>
@@ -124,7 +124,7 @@
 <model name="box_2">
 <pose>
 4 0 0 0 0 0 </pose>
- <link name="unit_box_link_2">
+ <link name="link_2">
 <inertial>
 <mass>1</mass>
  <inertia>
@@ -166,7 +166,7 @@
 <model name="box_3">
 <pose>
 0 4 0 0 0 0 </pose>
- <link name="unit_box_link_3">
+ <link name="link_3">
 <inertial>
 <mass>1</mass>
  <inertia>
@@ -208,7 +208,7 @@
 <model name="box_4">
 <pose>
 0 -4 0 0 0 0 </pose>
- <link name="unit_box_link_4">
+ <link name="link_4">
 <inertial>
 <mass>1</mass>
  <inertia>
@@ -250,7 +250,7 @@
 <model name="box_5">
 <pose>
 -3 0 0 0 0 0 </pose>
- <link name="unit_box_link_5">
+ <link name="link_5">
 <inertial>
 <mass>1</mass>
  <inertia>
@@ -291,8 +291,8 @@
 
 <model name="lightrgbfff_a">
 <pose>
--0.500000 -0.500000 0 0 0 0 </pose>
- <link name="unit_box_link_6">
+0 0 -0.200000 0 0 0 </pose>
+ <link name="link_6">
 <inertial>
 <mass>1</mass>
  <inertia>
@@ -306,19 +306,19 @@
  </inertial>
  <collision name="collision">
 <geometry>
-<box>
-<size>
-0.100000 0.100000 0.100000 </size>
- </box>
+<cylinder>
+<radius>0.500000</radius>
+ <length>0.100000</length>
+ </cylinder>
  </geometry>
  <max_contacts>10</max_contacts>
  </collision>
  <visual name="visual">
 <geometry>
-<box>
-<size>
-0.100000 0.100000 0.100000 </size>
- </box>
+<cylinder>
+<radius>0.500000</radius>
+ <length>0.100000</length>
+ </cylinder>
  </geometry>
  <material>
 <script>
