@@ -79,9 +79,9 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-<model name="box_1">
+<model name="wall_1">
 <pose>
--4 0 0 0 0 0 </pose>
+-1.300000 -1.800000 0.450000 0 0 2.406153 </pose>
  <link name="link_1">
 <inertial>
 <mass>1</mass>
@@ -98,7 +98,7 @@
 <geometry>
 <box>
 <size>
-1 8 1 </size>
+5.663921 0.100000 1 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -107,7 +107,7 @@
 <geometry>
 <box>
 <size>
-1 8 1 </size>
+5.663921 0.100000 1 </size>
  </box>
  </geometry>
  <material>
@@ -121,9 +121,9 @@
  <static>1</static>
  </model>
 
-<model name="box_2">
+<model name="wall_2">
 <pose>
-4 0 0 0 0 0 </pose>
+-3.500000 0.600000 0.450000 0 0 1.768192 </pose>
  <link name="link_2">
 <inertial>
 <mass>1</mass>
@@ -140,7 +140,7 @@
 <geometry>
 <box>
 <size>
-1 8 1 </size>
+1.019804 0.100000 1 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -149,7 +149,7 @@
 <geometry>
 <box>
 <size>
-1 8 1 </size>
+1.019804 0.100000 1 </size>
  </box>
  </geometry>
  <material>
@@ -163,9 +163,9 @@
  <static>1</static>
  </model>
 
-<model name="box_3">
+<model name="wall_3">
 <pose>
-0 4 0 0 0 0 </pose>
+-3.250000 2.000000 0.450000 0 0 1.199905 </pose>
  <link name="link_3">
 <inertial>
 <mass>1</mass>
@@ -182,7 +182,7 @@
 <geometry>
 <box>
 <size>
-8 1 1 </size>
+1.931321 0.100000 1 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -191,7 +191,7 @@
 <geometry>
 <box>
 <size>
-8 1 1 </size>
+1.931321 0.100000 1 </size>
  </box>
  </geometry>
  <material>
@@ -205,9 +205,9 @@
  <static>1</static>
  </model>
 
-<model name="box_4">
+<model name="wall_4">
 <pose>
-0 -4 0 0 0 0 </pose>
+-0.600000 2.950000 0.450000 0 0 0.021736 </pose>
  <link name="link_4">
 <inertial>
 <mass>1</mass>
@@ -224,7 +224,7 @@
 <geometry>
 <box>
 <size>
-8 1 1 </size>
+4.601087 0.100000 1 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -233,7 +233,7 @@
 <geometry>
 <box>
 <size>
-8 1 1 </size>
+4.601087 0.100000 1 </size>
  </box>
  </geometry>
  <material>
@@ -247,9 +247,9 @@
  <static>1</static>
  </model>
 
-<model name="box_5">
+<model name="wall_5">
 <pose>
--3 0 0 0 0 0 </pose>
+2.450000 0.000000 0.450000 0 0 -1.325818 </pose>
  <link name="link_5">
 <inertial>
 <mass>1</mass>
@@ -266,7 +266,7 @@
 <geometry>
 <box>
 <size>
-1 1 1 </size>
+6.184658 0.100000 1 </size>
  </box>
  </geometry>
  <max_contacts>10</max_contacts>
@@ -275,7 +275,49 @@
 <geometry>
 <box>
 <size>
-1 1 1 </size>
+6.184658 0.100000 1 </size>
+ </box>
+ </geometry>
+ <material>
+<script>
+<uri>file://media/materials/scripts/gazebo.material</uri>
+ <name>Gazebo/Grey</name>
+ </script>
+ </material>
+ </visual>
+ </link>
+ <static>1</static>
+ </model>
+
+<model name="wall_6">
+<pose>
+2.000000 -3.350000 0.450000 0 0 -2.857799 </pose>
+ <link name="link_6">
+<inertial>
+<mass>1</mass>
+ <inertia>
+<izz>1</izz>
+ <ixx>1</ixx>
+ <iyz>0</iyz>
+ <ixz>0</ixz>
+ <ixy>0</ixy>
+ <iyy>1</iyy>
+ </inertia>
+ </inertial>
+ <collision name="collision">
+<geometry>
+<box>
+<size>
+2.500000 0.100000 1 </size>
+ </box>
+ </geometry>
+ <max_contacts>10</max_contacts>
+ </collision>
+ <visual name="visual">
+<geometry>
+<box>
+<size>
+2.500000 0.100000 1 </size>
  </box>
  </geometry>
  <material>
@@ -291,8 +333,8 @@
 
 <model name="lightrgbfff_a">
 <pose>
-0 0 -0.200000 0 0 0 </pose>
- <link name="link_6">
+0.360000 -1.590000 -0.200000 0 0 0 </pose>
+ <link name="link_7">
 <inertial>
 <mass>1</mass>
  <inertia>
@@ -307,7 +349,7 @@
  <collision name="collision">
 <geometry>
 <cylinder>
-<radius>0.500000</radius>
+<radius>0.600000</radius>
  <length>0.100000</length>
  </cylinder>
  </geometry>
@@ -316,7 +358,7 @@
  <visual name="visual">
 <geometry>
 <cylinder>
-<radius>0.500000</radius>
+<radius>0.600000</radius>
  <length>0.100000</length>
  </cylinder>
  </geometry>

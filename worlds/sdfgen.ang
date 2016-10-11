@@ -7,7 +7,7 @@
 # function define word, "buildfunc".
 
 require "xmlgen.ang" import
-
+require "util.ang" drop
 package sdfgen
 public
 
@@ -191,6 +191,22 @@ public
     
 public
 
+
+# modifiers
+
+:nocollide |v:t|
+    cases
+        ?v type `hash = if
+            ?v?`contents nocollide drop
+        case
+        ?v type `list = if
+            ?v`collision rmtagfromlist
+            ?v each {i nocollide drop}
+        case
+        otherwise
+    ?v
+;
+
 # These are the building functions. Each has two forms, one which 
 # takes a name after all other arguments (mknamed...)
 # and one which autogenerates the name (mk...)
@@ -204,6 +220,26 @@ public
      `static none 1 mktag
      ] mktag
 ) "box" buildfunc
+
+(|x1,y1,x2,y2,name:x,y,yaw,len|
+    # calculate the box
+    
+    # centre point 
+    ?x1 ?x2 + 0.5* !x
+    ?y1 ?y2 + 0.5* !y
+    # rotation
+    ?y2 ?y1 - ?x2 ?x1 - atan2 !yaw
+    # length
+    ?y1 ?y2 - dup * ?x2 ?x1 - dup * + sqrt !len
+    
+    `model
+    [% `name ?name ]
+    [
+     `pose none [?x,?y,0.45,0,0,?yaw] mktag,
+     [?len, 0.1, 1] mkboxgeometry mklink,
+     `static none 1 mktag
+     ] mktag
+) "wall" buildfunc
 
 # mkcyl.. axis is Z=up.
 (|x,y,z,r,l,name:|
