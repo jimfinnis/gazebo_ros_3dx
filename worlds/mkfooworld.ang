@@ -16,7 +16,7 @@ require "util.ang" import
  
  # the "light"
  # xyz rad len
- 0.36 -1.59 -0.2    0.6 0.1 "lightrgbfff_a" mknamedcyl
+ 0.36 -1.59 -0.2    1 0.1 "lightrgbfff_a" mknamedcyl
  
  
  
