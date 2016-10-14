@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <launch>
+  <arg name="gui" default="false"/>
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
   <rosparam file="$(find gazebo_ros_3dx)/config/p3dx_control.yaml" command="load"/>
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-    output="screen" ns="/p3dx" args="left_velocity_controller right_velocity_controller joint_state_controller">
+    output="screen" ns="/p3dx" args="--shutdown-timeout 1 left_velocity_controller right_velocity_controller joint_state_controller">
   </node>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
@@ -21,11 +22,13 @@
   />
   
   <!-- start gazebo with a suitable world -->
-  <include file="$(find gazebo_ros_3dx)/launch/world.launch"/>
+  <include file="$(find gazebo_ros_3dx)/launch/world.launch">
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
 
   <!-- push robot_description to factory and spawn robot in gazebo -->
   <node name="spawn_pioneer" pkg="gazebo_ros" type="spawn_model"
-    args="-z 0.1 -urdf -param robot_description -model robot_description"
+    args="$(optenv ROBOT_INITIAL_POSE) -z 0.1 -urdf -param robot_description -model robot_description"
     respawn="false" output="screen" />
   
   <!-- start the "tracker" publishing to Diamond Apparatus -->
