@@ -5,6 +5,9 @@ require "util.ang" import
 :walldraw |x,y:|  ?X ?Y ?x ?y mkwall,
     ?x !X ?y !Y;
 
+# was 0.6
+0.2 !LightRad
+
 [
 0.8 -3.7 wallmove
 -3.4 0.1 walldraw
@@ -16,7 +19,7 @@ require "util.ang" import
  
  # the "light"
  # xyz rad len
- 0.36 -1.59 -0.2    0.2 0.1 "lightrgbfff_a" mknamedcyl
+ 0.36 -1.59 -0.2    ?LightRad 0.1 "lightrgbfff_a" mknamedcyl 
  
  
  

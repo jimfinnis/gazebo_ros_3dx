@@ -1,0 +1,35 @@
+<svg height="500" width="500">
+<defs>
+<marker id="markerArrowLEnd" refY="6" markerHeight="13" refX="2" orient="auto" markerWidth="13">
+<path fill-opacity="1" d="M2,2 L2,11 L10,6 L2,2"/>
+
+</marker>
+<marker id="markerArrowSStart" refY="3" markerHeight="7" refX="5" orient="auto" markerWidth="7">
+<path fill-opacity="1" d="M5,1 L5,5 L1,3 L5,1"/>
+
+</marker>
+<marker id="markerArrowSEnd" refY="3" markerHeight="7" refX="1" orient="auto" markerWidth="7">
+<path fill-opacity="1" d="M1,1 L1,5 L5,3 L1,1"/>
+
+</marker>
+
+</defs>
+<circle cy="418.760010" r="24.000000" style="stroke:rgb(0,0,0);stroke-width:1" cx="418.480011"/>
+<circle cy="359.359985" r="24.000000" style="stroke:rgb(0,0,0);stroke-width:1" cx="397.479980"/>
+<circle cy="317.959991" r="24.000000" style="stroke:rgb(0,0,0);stroke-width:1" cx="345.880005"/>
+<circle cy="296.119995" r="24.000000" style="stroke:rgb(0,0,0);stroke-width:1" cx="285.640015"/>
+<circle cy="296.119995" r="24.000000" style="stroke:rgb(0,0,0);stroke-width:1" cx="214.360001"/>
+<circle cy="317.959991" r="24.000000" style="stroke:rgb(0,0,0);stroke-width:1" cx="154.119995"/>
+<circle cy="359.359985" r="24.000000" style="stroke:rgb(0,0,0);stroke-width:1" cx="102.520004"/>
+<circle cy="418.760010" r="24.000000" style="stroke:rgb(0,0,0);stroke-width:1" cx="81.519989"/>
+<line x1="418.480011" x2="466.480008" y2="418.760004" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:1" y1="418.760010"/>
+<line x1="397.479980" x2="434.250135" y2="328.506193" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:1" y1="359.359985"/>
+<line x1="345.880005" x2="369.879996" y2="276.390776" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:1" y1="317.959991"/>
+<line x1="285.640015" x2="293.975113" y2="248.849229" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:1" y1="296.119995"/>
+<line x1="214.360001" x2="206.024887" y2="248.849229" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:1" y1="296.119995"/>
+<line x1="154.119995" x2="130.120004" y2="276.390776" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:1" y1="317.959991"/>
+<line x1="102.520004" x2="65.749865" y2="328.506193" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:1" y1="359.359985"/>
+<line x1="81.519989" x2="33.519992" y2="418.760004" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:1" y1="418.760010"/>
+
+</svg>
+

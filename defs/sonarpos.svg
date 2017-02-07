@@ -1,0 +1,59 @@
+<svg height="300" width="500">
+<defs>
+<marker id="markerArrowLEnd" refY="6" markerHeight="13" refX="2" orient="auto" markerWidth="13">
+<path fill-opacity="1" d="M2,2 L2,11 L10,6 L2,2"/>
+
+</marker>
+<marker id="markerArrowSStart" refY="3" markerHeight="7" refX="5" orient="auto" markerWidth="7">
+<path fill-opacity="1" d="M5,1 L5,5 L1,3 L5,1"/>
+
+</marker>
+<marker id="markerArrowSEnd" refY="3" markerHeight="7" refX="1" orient="auto" markerWidth="7">
+<path fill-opacity="1" d="M1,1 L1,5 L5,3 L1,1"/>
+
+</marker>
+
+</defs>
+<line x1="81.519989" x2="21.519990" y2="218.760004" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:3" y1="218.760010"/>
+<line x1="102.520004" x2="56.557331" y2="120.792741" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:3" y1="159.360001"/>
+<line x1="154.119995" x2="124.120003" y2="65.998470" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:3" y1="117.959991"/>
+<line x1="214.360001" x2="203.941109" y2="37.031534" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:3" y1="96.119995"/>
+<line x1="285.640015" x2="296.058891" y2="37.031534" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:3" y1="96.119995"/>
+<line x1="345.880005" x2="375.879997" y2="65.998470" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:3" y1="117.959991"/>
+<line x1="397.479980" x2="443.442669" y2="120.792741" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:3" y1="159.360001"/>
+<line x1="418.480011" x2="478.480010" y2="218.760004" style="marker-end:url(#markerArrowSEnd);stroke:rgb(0,0,0);stroke-width:3" y1="218.760010"/>
+<circle cy="218.760010" r="24.000000" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1" cx="81.519989"/>
+<circle cy="159.360001" r="24.000000" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1" cx="102.520004"/>
+<circle cy="117.959991" r="24.000000" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1" cx="154.119995"/>
+<circle cy="96.119995" r="23.999985" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1" cx="214.360001"/>
+<circle cy="96.119995" r="23.999985" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1" cx="285.640015"/>
+<circle cy="117.959991" r="24.000000" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1" cx="345.880005"/>
+<circle cy="159.360001" r="24.000000" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1" cx="397.479980"/>
+<circle cy="218.760010" r="24.000000" style="fill:rgb(255,255,255);stroke:rgb(0,0,0);stroke-width:1" cx="418.480011"/>
+<text x="81.519989" text-anchor="middle" y="218.760010" style="fill:rgb(0,0,0);stroke:none;stroke-width:1" font-size="24">
+0
+</text>
+<text x="102.520004" text-anchor="middle" y="159.360001" style="fill:rgb(0,0,0);stroke:none;stroke-width:1" font-size="24">
+1
+</text>
+<text x="154.119995" text-anchor="middle" y="117.959991" style="fill:rgb(0,0,0);stroke:none;stroke-width:1" font-size="24">
+2
+</text>
+<text x="214.360001" text-anchor="middle" y="96.119995" style="fill:rgb(0,0,0);stroke:none;stroke-width:1" font-size="24">
+3
+</text>
+<text x="285.640015" text-anchor="middle" y="96.119995" style="fill:rgb(0,0,0);stroke:none;stroke-width:1" font-size="24">
+4
+</text>
+<text x="345.880005" text-anchor="middle" y="117.959991" style="fill:rgb(0,0,0);stroke:none;stroke-width:1" font-size="24">
+5
+</text>
+<text x="397.479980" text-anchor="middle" y="159.360001" style="fill:rgb(0,0,0);stroke:none;stroke-width:1" font-size="24">
+6
+</text>
+<text x="418.480011" text-anchor="middle" y="218.760010" style="fill:rgb(0,0,0);stroke:none;stroke-width:1" font-size="24">
+7
+</text>
+
+</svg>
+

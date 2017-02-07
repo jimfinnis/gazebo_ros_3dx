@@ -1,0 +1,69 @@
+`regex library drop
+`io library drop
+require "util.ang" drop
+require "svg.ang" drop
+
+# table of half the front sonars
+--EOT
+0       0.0677  0.1404      90
+1       0.1172  0.1229      50
+2       0.1517  0.0799      30
+3       0.1699  0.0297      10
+--EOT
+
+# modify a hash by applying a function to a key
+:hashmod |key,func,hash:|
+    ?key ?hash get ?func@ ?key ?hash set
+;
+
+(|:x2,y2,a|
+    # read and parse the data
+    "\n" split
+    []!L
+    each {
+        i len 10 > if
+            i <<"\\s+" regex$compile>> regex$split
+            (tofloat) map
+            explode !Angle !Y !X !Num
+            [% `x ?X,`y ?Y,`a ?Angle] ?L push
+        then
+    }
+    # add the other side of the sensor, which is a copy
+    # reflected in Y and angle, and reversed.
+    ?L clone !L2
+    ?L2 reverse each {
+        i clone !H 
+        `y (neg) ?H hashmod
+        `a (neg) ?H hashmod
+        ?H ?L push
+    }
+    
+    [(|x,y:| ?y -1200 * 250 + ?x -1200 * 300 + )] svg$setchain
+    
+    
+    [% `stroke [0,0,0], `width 3] svg$pushstyle
+    ?L each {
+        i?`a 3.1415927 * 180 / !a
+        ?a cos 0.05 * i?`x + !x2
+        ?a sin 0.05 * i?`y + !y2
+        
+        i?`x i?`y ?x2 ?y2
+        svg$arrow
+    }
+    svg$popstyle
+    
+    [% `fill [255,255,255], `stroke [0,0,0], `width 1] svg$pushstyle
+    ?L each {
+        i?`x i?`y 0.02 svg$circle
+    }
+    svg$popstyle
+    
+    [% `stroke "none", `fill [0,0,0], `width 1] svg$pushstyle
+    ?L each {
+        i?`x i?`y 24 "middle" iidx svg$text
+    }
+    svg$popstyle
+
+    500 300 svg$out
+)@
+quit
