@@ -6,7 +6,7 @@ It also subscribes to two topics, leftmotor and rightmotor (handled by remapping
 to launch with that file or modify that file) (or work out how to do it yourself!)
 
 To use the thing
-* put it all into your Catkin workspace as a package and make the workspace. Remove any 
+* put it all into your Catkin workspace as a package and make the workspace.
 * remove the last node from `launch/sim.launch` (the "diamondpublish" node)
 * remove the "lightsensor" node from `defs/jcf.xacro` (which uses my lightsensor library to publish a light sensor based on simulated camera data)
 * start roscore
